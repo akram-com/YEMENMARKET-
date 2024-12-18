@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>يمن ماركت - السوق المفتوح</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
+    header { background-color: #007bff; color: white; text-align: center; padding: 15px; }
+    nav { display: flex; justify-content: space-around; background-color: #007bff; padding: 10px; }
+    nav a { color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; }
+    nav a:hover { background-color: #0056b3; }
+    .product { padding: 15px; margin-bottom: 15px; border-radius: 5px; background: white; border: 1px solid #ddd; }
+    .product img { width: 100%; height: auto; border-radius: 5px; }
+    .btn { display: block; background-color: #007bff; color: white; text-align: center; padding: 10px; text-decoration: none; margin-top: 10px; border-radius: 5px; }
+    .btn:hover { background-color: #0056b3; }
+    .container { max-width: 600px; margin: 20px auto; padding: 15px; background: white; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    input, textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; }
+    button { background-color: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #218838; }
+    footer { text-align: center; background-color: #007bff; color: white; padding: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>يمن ماركت</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="home.html">الصفحة الرئيسية</a>
+    <a href="add-ad.html">أضف إعلانك</a>
+    <a href="about.html">حول</a>
+  </nav>
+
+  <!-- Home Page (Products) -->
+  <div id="home" class="container">
+    <div class="product">
+      <img src="https://via.placeholder.com/800x400" alt="Product 1">
+      <h3>منتج 1</h3>
+      <p>السعر: $100</p>
+      <p>الوصف: هذا منتج رائع للبيع.</p>
+      <a href="#" class="btn">عرض التفاصيل</a>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/800x400" alt="Product 2">
+      <h3>منتج 2</h3>
+      <p>السعر: $200</p>
+      <p>الوصف: منتج آخر للبيع.</p>
+      <a href="#" class="btn">عرض التفاصيل</a>
+    </div>
+  </div>
+
+  <!-- Add Ad Page -->
+  <div id="add-ad" class="container">
+    <form id="adForm">
+      <h2>أضف إعلانك</h2>
+      <input type="text" id="adTitle" placeholder="عنوان الإعلان" required>
+      <textarea id="adDescription" placeholder="وصف الإعلان" required></textarea>
+      <input type="number" id="adPrice" placeholder="السعر ($)" required>
+      <button type="submit">إضافة الإعلان</button>
+    </form>
+  </div>
+
+  <!-- About Page -->
+  <div id="about" class="container">
+    <h2>حول يمن ماركت</h2>
+    <p>يمن ماركت هو منصة إلكترونية لبيع وشراء المنتجات بسهولة وأمان. هدفنا هو توفير تجربة بيع وشراء مميزة للمستخدمين في اليمن والمنطقة.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 يمن ماركت - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <!-- JavaScript for Adding Ad (Optional) -->
+  <script>
+    document.getElementById('adForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var title = document.getElementById('adTitle').value;
+      var description = document.getElementById('adDescription').value;
+      var price = document.getElementById('adPrice').value;
+
+      // هنا يمكن إرسال البيانات إلى قاعدة بيانات أو Google Sheets
+      alert("تم إضافة إعلانك بنجاح!");
+
+      // يمكن هنا إضافة الكود لإرسال البيانات إلى قاعدة بيانات حقيقية مثل Google Sheets أو Firebase
+    });
+  </script>
+
+</body>
+</html>
